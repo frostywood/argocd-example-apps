@@ -6,7 +6,7 @@ metadata:
 spec:
   # Route HTTP traffic (port 80)
   entryPoints:
-    - web
+    - websecure
   routes:
     - match: Host(`guestbook.k3s.woodlett.uk`)
       kind: Rule

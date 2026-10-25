@@ -1,0 +1,16 @@
+# basic-ingressroute.yaml
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: guestbook-route
+  namespace: default
+spec:
+  # Route HTTP traffic (port 80)
+  entryPoints:
+    - web
+  routes:
+    - match: Host(`guestbook.k3s.woodlett.uk`)
+      kind: Rule
+      services:
+        - name: guestbook-ui-svc
+          port: 80

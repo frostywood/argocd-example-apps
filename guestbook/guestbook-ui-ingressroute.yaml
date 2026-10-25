@@ -12,5 +12,5 @@ spec:
     - match: Host(`guestbook.k3s.woodlett.uk`)
       kind: Rule
       services:
-        - name: guestbook-ui-svc
+        - name: guestbook-ui
           port: 80
